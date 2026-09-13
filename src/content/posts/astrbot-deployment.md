@@ -1,5 +1,5 @@
 ---
-title: 从零开始搭建你的第一个AI聊天机器人：AstrBot本地部署教程
+title: 从零开始搭建你的第一个AI聊天机器人：AstrBot部署教程
 slug: astrbot-deployment
 published: 2026-09-11 19:57:21
 updated: 2026-09-11 19:57:21
