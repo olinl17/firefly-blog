@@ -4,7 +4,7 @@ slug: astrbot-deployment
 published: 2026-09-11 19:57:21
 updated: 2026-09-11 19:57:21
 description: AstrBot 是 GitHub 4万+ star 的开源 AI 机器人框架，支持 QQ、微信、Telegram 等多平台。本文记录 Docker Compose 部署 AstrBot + NapCat 接入 QQ 的完整过程，含国内镜像加速、风控避坑等实操经验。
-image: https://img.olinl.com/file/post-img/astrbot-deployment/6oq1nRnQ.webp
+image: https://img.olinl.com/file/post-img/astrbot-deployment/TSBTs0Xw.webp
 category: 部署文档
 tags:
   - Bot
@@ -343,6 +343,8 @@ AstrBot内置了TTS(文本转语音)功能，配置好TTS提供商后可以让As
 
 硅基流动提供了简单的音色克隆服务，你可以据此赋予你的AstrBot任何人的声音(**仅供学习，切勿用于非法场景**)
 
+音色包：[夸克网盘](https://pan.quark.cn/s/24ecfa25e829?pwd=Zfaq)
+
 [前往硅基流动](https://cloud.siliconflow.cn/i/9cUr4OLn)
 
 打开自定义音色配置界面：[voice.gbkgov.cn](https://voice.gbkgov.cn)，这里使用的是 [AstrBot Plugin VITS Pro](https://github.com/Chris95743/astrbot_plugin_VITS_pro)这个仓库
@@ -444,6 +446,7 @@ API Key:  填入硅基流动的Api Key
 
 人格支持以 json 文件的形式在 WebUI 中直接导入导出，备份起来也方便。
 
+人格包：[夸克网盘](https://pan.quark.cn/s/b89ddfef4b95?pwd=GDqK)
 
 ### 2、高阶玩法
 
