@@ -345,7 +345,7 @@ AstrBot内置了TTS(文本转语音)功能，配置好TTS提供商后可以让As
 
 音色包：[夸克网盘](https://pan.quark.cn/s/24ecfa25e829?pwd=Zfaq)
 
-音色资源库(原神)：https://res.acgnai.top
+音色资源库：https://res.acgnai.top
 
 [前往硅基流动](https://cloud.siliconflow.cn/i/9cUr4OLn)
 
