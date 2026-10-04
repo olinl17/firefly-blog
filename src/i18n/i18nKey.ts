@@ -344,6 +344,7 @@ enum I18nKey {
 
 	// 访问量统计
 	pageViews = "pageViews",
+	pageVisitors = "pageVisitors",
 	pageViewsLoading = "pageViewsLoading",
 	pageViewsError = "pageViewsError",
 

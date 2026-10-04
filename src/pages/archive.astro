@@ -3,8 +3,15 @@ import ArchivePanel from "@components/controls/ArchivePanel.astro";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
+import UmamiPageViews from "@/components/analytics/UmamiPageViews.astro";
 ---
 
 <MainGridLayout title={i18n(I18nKey.archive)}>
+  <div class="card-base px-8 py-6 mb-4">
+    <div class="flex items-center justify-between gap-4">
+      <div class="text-2xl font-bold text-(--primary)">{i18n(I18nKey.archive)}</div>
+      <UmamiPageViews path="/archive/" variant="badge" />
+    </div>
+  </div>
   <ArchivePanel />
 </MainGridLayout>

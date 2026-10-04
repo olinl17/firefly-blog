@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import UmamiPageViews from "@/components/analytics/UmamiPageViews.astro";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
@@ -12,12 +13,17 @@ const totalPosts = categories.reduce((sum, cat) => sum + cat.count, 0);
 <MainGridLayout title={i18n(I18nKey.categories)}>
     <!-- 页面标题 -->
     <div class="card-base px-8 py-6 mb-4">
-        <div class="text-2xl font-bold text-(--primary) mb-2">
-            {i18n(I18nKey.categories)}
+        <div class="flex items-start justify-between gap-4">
+            <div>
+                <div class="text-2xl font-bold text-(--primary) mb-2">
+                    {i18n(I18nKey.categories)}
+                </div>
+                <p class="text-30 text-sm">
+                    {i18n(I18nKey.allCategories)} · {totalPosts} {i18n(I18nKey.postsCount)}
+                </p>
+            </div>
+            <UmamiPageViews path="/categories/" variant="badge" />
         </div>
-        <p class="text-30 text-sm">
-            {i18n(I18nKey.allCategories)} · {totalPosts} {i18n(I18nKey.postsCount)}
-        </p>
     </div>
 
     <!-- 分类卡片列表 -->

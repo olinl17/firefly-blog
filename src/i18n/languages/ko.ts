@@ -356,6 +356,7 @@ export const ko: Translation = {
 
 	// Page Views Statistics
 	[Key.pageViews]: "조회수",
+	[Key.pageVisitors]: "방문자",
 	[Key.pageViewsLoading]: "불러오는 중...",
 	[Key.pageViewsError]: "통계를 불러올 수 없습니다",
 

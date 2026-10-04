@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import UmamiPageViews from "@/components/analytics/UmamiPageViews.astro";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
@@ -13,12 +14,17 @@ const totalPosts = seriesList.reduce((sum, series) => sum + series.count, 0);
 <MainGridLayout title={i18n(I18nKey.series)} description={i18n(I18nKey.allSeries)}>
     <!-- 页面标题 -->
     <div class="card-base px-8 py-6 mb-4">
-        <div class="text-2xl font-bold text-(--primary) mb-2">
-            {i18n(I18nKey.series)}
+        <div class="flex items-start justify-between gap-4">
+            <div>
+                <div class="text-2xl font-bold text-(--primary) mb-2">
+                    {i18n(I18nKey.series)}
+                </div>
+                <p class="text-30 text-sm">
+                    {i18n(I18nKey.allSeries)} · {totalPosts} {i18n(I18nKey.postsCount)}
+                </p>
+            </div>
+            <UmamiPageViews path="/series/" variant="badge" />
         </div>
-        <p class="text-30 text-sm">
-            {i18n(I18nKey.allSeries)} · {totalPosts} {i18n(I18nKey.postsCount)}
-        </p>
     </div>
 
     <!-- 系列列表：手风琴卡片（默认收起） -->

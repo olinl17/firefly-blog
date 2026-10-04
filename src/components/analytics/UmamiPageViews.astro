@@ -1,0 +1,68 @@
+---
+import { Icon } from "astro-icon/components";
+import { analyticsConfig } from "@/config";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+
+interface Props {
+	path: string;
+	className?: string;
+	variant?: "meta" | "badge" | "cover";
+}
+
+const { path, className = "", variant = "meta" } = Astro.props;
+const umamiConfig = analyticsConfig.umamiAnalytics;
+const shareId = umamiConfig?.shareId || "";
+const apiBase =
+	umamiConfig?.shareApiBase ||
+	(umamiConfig?.scriptUrl ? new URL(umamiConfig.scriptUrl).origin : "");
+---
+
+{
+	shareId && apiBase && (
+		<div
+			class:list={[
+				"umami-page-views flex items-center",
+				variant === "badge"
+					? "gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-100/60 dark:bg-neutral-800/50 text-xs transition"
+					: "",
+				variant === "meta" ? "gap-1" : "",
+				variant === "cover" ? "cover-pv-badge" : "",
+				className,
+			]}
+			data-umami-pv-path={path}
+			data-umami-share-id={shareId}
+			data-umami-api-base={apiBase}
+		>
+			<Icon
+				name="material-symbols:visibility-outline-rounded"
+				class={variant === "badge" ? "text-(--primary) text-base" : "text-xl"}
+			/>
+			<span
+				class:list={[
+					variant === "badge"
+						? "font-bold text-neutral-900 dark:text-neutral-100 whitespace-nowrap"
+						: variant === "cover"
+							? ""
+							: "text-50 text-sm font-medium mr-1",
+				]}
+			>
+				{i18n(I18nKey.pageViews)}
+			</span>
+			<span
+				class:list={[
+					variant === "badge"
+						? "font-bold text-neutral-900 dark:text-neutral-100 whitespace-nowrap"
+						: variant === "cover"
+							? ""
+							: "text-50 text-sm font-medium",
+				]}
+				data-umami-pv-value
+			>
+				{i18n(I18nKey.pageViewsLoading)}
+			</span>
+		</div>
+	)
+}
+
+<script src="@/scripts/umami-views.ts"></script>

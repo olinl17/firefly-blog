@@ -101,6 +101,8 @@ declare global {
 		__scheduleInit?: boolean;
 		/** 欢迎弹窗关闭回调 */
 		__closeWelcomeToast?: () => void;
+		/** Umami 浏览量初始化守卫，确保 Swup 切页时只注册一次 */
+		__umamiViewsInit?: boolean;
 	}
 
 	interface MediaQueryList {

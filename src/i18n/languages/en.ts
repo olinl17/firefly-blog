@@ -358,6 +358,7 @@ export const en: Translation = {
 
 	// Page Views Statistics
 	[Key.pageViews]: "Views",
+	[Key.pageVisitors]: "Visitors",
 	[Key.pageViewsLoading]: "Loading...",
 	[Key.pageViewsError]: "Stats unavailable",
 

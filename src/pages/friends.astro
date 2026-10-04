@@ -3,6 +3,7 @@ import { getEntry, render } from "astro:content";
 import Comment from "@components/comment/index.astro";
 import Markdown from "@components/common/Markdown.astro";
 import { Icon } from "astro-icon/components";
+import UmamiPageViews from "@/components/analytics/UmamiPageViews.astro";
 import {
 	commentConfig,
 	friendsPageConfig,
@@ -59,6 +60,7 @@ const description =
             <h2>{title}</h2>
             {description && <p>{description}</p>}
           </div>
+          <UmamiPageViews path="/friends/" variant="badge" className="ml-auto" />
         </div>
       </div>
 

@@ -2,6 +2,7 @@
 
 import { getEntry, render } from "astro:content";
 import Markdown from "@components/common/Markdown.astro";
+import UmamiPageViews from "@/components/analytics/UmamiPageViews.astro";
 import { profileConfig } from "@/config/profileConfig";
 import { siteConfig } from "@/config/siteConfig";
 import I18nKey from "@/i18n/i18nKey";
@@ -30,7 +31,11 @@ const jsonLd = buildProfilePage({
 <MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
     <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <div class="flex w-full rounded-(--radius-large) overflow-hidden relative min-h-32">
-        <div class="card-base z-10 px-9 py-6 relative w-full ">
+        <div class="card-base z-10 px-9 py-6 relative w-full">
+            <div class="flex items-center justify-between gap-4 mb-6">
+                <h1 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{i18n(I18nKey.about)}</h1>
+                <UmamiPageViews path="/about/" variant="badge" />
+            </div>
             <Markdown class="mt-2">
                 <Content />
             </Markdown>
