@@ -1,14 +1,14 @@
 ---
+import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
-import UmamiPageViews from "@/components/analytics/UmamiPageViews.astro";
+import DynamicCover from "@/components/pages/dynamic/DynamicCover.astro";
 import DynamicFeed from "@/components/pages/dynamic/DynamicFeed.svelte";
 import DynamicItemTemplate from "@/components/pages/dynamic/DynamicItemTemplate.astro";
 import { commentConfig, dynamicConfig, siteConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
-import "@/styles/pages/common.css";
-import "@/styles/pages/dynamic.css";
+import "@/styles/dynamic.css";
 import { url } from "@/utils/url-utils";
 
 if (!siteConfig.pages.dynamic) {
@@ -28,32 +28,55 @@ const dataUrl = dynamicConfig.apiUrl?.startsWith("http")
 	? dynamicConfig.apiUrl
 	: url(dynamicConfig.apiUrl || "/api/dynamic.json");
 const memos = dynamicConfig.memos;
+let dynamicCount = 0;
+
+if (memos?.enable && memos.apiUrl) {
+	try {
+		const response = await fetch(`${memos.apiUrl}/api/v1/memos?pageSize=1000`);
+		if (response.ok) {
+			const data = (await response.json()) as {
+				memos?: Array<{ state?: string }>;
+			};
+			dynamicCount = (data.memos || []).filter(
+				(memo) => memo.state === "NORMAL",
+			).length;
+		}
+	} catch {
+		// The client-side feed remains available if the build-time count request fails.
+	}
+}
+
+if (!dynamicCount && !memos?.enable) {
+	dynamicCount = (await getCollection("dynamic")).length;
+}
 ---
 
 <MainGridLayout title={title} description={description}>
-	<section class="page-shell" aria-labelledby="dynamic-page-title">
+	<section class="dynamic-page" aria-labelledby="dynamic-page-title">
 		<div>
-			<header class="page-header card-base">
-				<div class="page-heading">
-					<div class="page-icon" aria-hidden="true">
+			{dynamicConfig.cover?.enable ? (
+				<DynamicCover title={title} description={description} {dynamicCount} />
+			) : (
+			<header class="dynamic-page-header card-base">
+				<div class="dynamic-page-heading">
+					<div class="dynamic-page-icon" aria-hidden="true">
 						<Icon name="material-symbols:forum-rounded" />
 					</div>
 					<div>
 						<h2 id="dynamic-page-title">{title}</h2>
 						{description && <p>{description}</p>}
 					</div>
-					<UmamiPageViews path="/dynamic/" variant="badge" className="ml-auto" />
 				</div>
 				<div
-					class="page-count"
+					class="dynamic-count"
 					aria-label={i18n(I18nKey.dynamic)}
 				>
 					<Icon name="material-symbols:dynamic-feed-rounded" />
-					<strong data-dynamic-page-count>0</strong>
+					<strong data-dynamic-page-count>{dynamicCount}</strong>
 					<span>{i18n(I18nKey.dynamic)}</span>
 				</div>
-				<div class="page-filter">
-					<label class="page-search">
+				<div class="dynamic-filter">
+					<label class="dynamic-search">
 						<Icon name="material-symbols:search-rounded" />
 						<input
 							type="search"
@@ -61,7 +84,7 @@ const memos = dynamicConfig.memos;
 							placeholder={i18n(I18nKey.dynamicSearch)}
 						/>
 					</label>
-					<label class="page-year-select">
+					<label class="dynamic-year-select">
 						<Icon name="material-symbols:calendar-month-rounded" />
 						<select data-year-select aria-label={i18n(I18nKey.year)}>
 							<option value="all">{i18n(I18nKey.dynamicAllYears)}</option>
@@ -70,6 +93,7 @@ const memos = dynamicConfig.memos;
 					</label>
 				</div>
 			</header>
+			)}
 
 			<DynamicFeed
 				client:load

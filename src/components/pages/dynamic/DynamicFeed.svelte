@@ -258,7 +258,7 @@ function goToPage(page: number) {
 	currentPage = page;
 	updateUrl(true);
 	document
-		.querySelector(".page-shell")
+		.querySelector(".dynamic-page")
 		?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -270,7 +270,7 @@ $effect(() => {
 onMount(() => {
 	registerDynamicGallery();
 	registerDynamicInlineComments();
-	const page = list.closest(".page-shell");
+	const page = list.closest(".dynamic-page");
 	template =
 		page?.querySelector<HTMLTemplateElement>("[data-dynamic-item-template]") ??
 		null;
@@ -327,21 +327,21 @@ onMount(() => {
 </script>
 
 {#if loading}
-	<div class="page-loading card-base" role="status">
-		<span class="page-loading-spinner" aria-hidden="true"></span>
+	<div class="dynamic-loading card-base" role="status">
+		<span class="dynamic-loading-spinner" aria-hidden="true"></span>
 		<p>{loadingText}</p>
 	</div>
 {:else if failed || entries.length === 0}
-	<div class="page-empty card-base">
+	<div class="dynamic-empty card-base">
 		<p>{emptyText}</p>
 	</div>
 {:else if filtered.length === 0}
-	<div class="page-no-results card-base">
+	<div class="dynamic-no-results card-base">
 		<p>{noResultsText}</p>
 	</div>
 {/if}
 
-<div class="page-feed" bind:this={list}></div>
+<div class="dynamic-feed" bind:this={list}></div>
 
 {#if !loading && !failed}
 	<ClientPagination
