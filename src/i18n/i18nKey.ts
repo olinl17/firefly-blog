@@ -520,6 +520,8 @@ enum I18nKey {
 	immersiveReading = "immersiveReading",
 	enterImmersiveReading = "enterImmersiveReading",
 	exitImmersiveReading = "exitImmersiveReading",
+	enterImmersiveFullWidth = "enterImmersiveFullWidth",
+	exitImmersiveFullWidth = "exitImmersiveFullWidth",
 	tocExpand = "tocExpand",
 	tocCollapse = "tocCollapse",
 }

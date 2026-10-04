@@ -81,6 +81,17 @@ body.immersive-reading #post-container {
 	margin: 0 auto !important;
 }
 
+/* 宽度切换按钮只在沉浸阅读模式下显示 */
+body:not(.immersive-reading) .immersive-width-toggle {
+	display: none !important;
+}
+
+/* 全宽模式：取消最大宽度，并增加左右边距避免贴边 */
+body.immersive-reading.immersive-full-width #post-container {
+	max-width: none !important;
+	padding-inline: 2rem !important;
+}
+
 /* 沉浸态一律不透明：无论壁纸模式的 wallpaper-transparent 如何，阅读面都不透出壁纸 */
 body.immersive-reading #post-container {
 	background-color: var(--card-bg) !important;

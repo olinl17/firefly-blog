@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import ImmersiveWidthToggle from "@/components/controls/ImmersiveWidthToggle.astro";
 import { analyticsConfig, commentConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
@@ -29,6 +30,7 @@ export interface Props {
 	showWords?: boolean;
 	showReadingTime?: boolean;
 	variant?: "default" | "cover";
+	showImmersiveWidthToggle?: boolean;
 }
 
 const {
@@ -54,6 +56,7 @@ const {
 	showReadingTime = false,
 	password,
 	variant = "default",
+	showImmersiveWidthToggle = false,
 } = Astro.props;
 
 const path = customPath || (id ? `/posts/${id}` : "");
@@ -276,6 +279,12 @@ const visibleTags =
           </span>
         </div>
       )
+  }
+
+  {
+    !isHome && showImmersiveWidthToggle && (
+      <ImmersiveWidthToggle />
+    )
   }
 
   {

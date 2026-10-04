@@ -528,6 +528,8 @@ export const zh_TW: Translation = {
 	[Key.immersiveReading]: "沉浸閱讀",
 	[Key.enterImmersiveReading]: "進入沉浸閱讀",
 	[Key.exitImmersiveReading]: "退出沉浸閱讀",
+	[Key.enterImmersiveFullWidth]: "全寬閱讀",
+	[Key.exitImmersiveFullWidth]: "緊湊閱讀",
 	[Key.tocExpand]: "展開目錄",
 	[Key.tocCollapse]: "摺疊目錄",
 };

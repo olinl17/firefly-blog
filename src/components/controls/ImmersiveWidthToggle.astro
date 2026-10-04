@@ -1,0 +1,101 @@
+---
+import { Icon } from "astro-icon/components";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+
+const STORAGE_KEY = "firefly-immersive-full-width";
+const enterLabel = i18n(I18nKey.enterImmersiveFullWidth);
+const exitLabel = i18n(I18nKey.exitImmersiveFullWidth);
+---
+
+<button
+	type="button"
+	id="immersive-width-toggle"
+	class="immersive-width-toggle flex items-center shrink-0"
+	aria-pressed="false"
+	title={enterLabel}
+	data-enter-label={enterLabel}
+	data-exit-label={exitLabel}
+	data-storage-key={STORAGE_KEY}
+>
+	<span class="meta-icon">
+		<Icon
+			name="material-symbols:width-wide-rounded"
+			class="immersive-width-icon-wide text-xl"
+		/>
+		<Icon
+			name="material-symbols:width-normal-rounded"
+			class="immersive-width-icon-normal hidden text-xl"
+		/>
+	</span>
+	<span class="text-50 text-sm font-medium whitespace-nowrap immersive-width-toggle-label">
+		{enterLabel}
+	</span>
+</button>
+
+<script is:inline>
+	(function () {
+		const STORAGE_KEY = "firefly-immersive-full-width";
+		const CLASS_NAME = "immersive-full-width";
+
+		function getButton() {
+			return document.getElementById("immersive-width-toggle");
+		}
+
+		function applyState(button, enabled) {
+			document.body.classList.toggle(CLASS_NAME, enabled);
+			button.setAttribute("aria-pressed", String(enabled));
+			const wideIcon = button.querySelector(".immersive-width-icon-wide");
+			const normalIcon = button.querySelector(".immersive-width-icon-normal");
+			const label = button.querySelector(".immersive-width-toggle-label");
+			if (enabled) {
+				wideIcon?.classList.add("hidden");
+				normalIcon?.classList.remove("hidden");
+				const text = button.dataset.exitLabel || "紧凑阅读";
+				button.title = text;
+				if (label) label.textContent = text;
+			} else {
+				wideIcon?.classList.remove("hidden");
+				normalIcon?.classList.add("hidden");
+				const text = button.dataset.enterLabel || "全宽阅读";
+				button.title = text;
+				if (label) label.textContent = text;
+			}
+		}
+
+		function init() {
+			const button = getButton();
+			if (!button) return;
+			const enabled = localStorage.getItem(STORAGE_KEY) === "true";
+			applyState(button, enabled);
+
+			button.addEventListener("click", () => {
+				const isEnabled = document.body.classList.contains(CLASS_NAME);
+				const next = !isEnabled;
+				localStorage.setItem(STORAGE_KEY, String(next));
+				applyState(button, next);
+			});
+		}
+
+		init();
+		document.addEventListener("astro:page-load", init);
+		document.addEventListener("swup:contentReplaced", () => {
+			setTimeout(init, 100);
+		});
+	})();
+</script>
+
+<style>
+	.immersive-width-toggle {
+		background: transparent;
+		border: 0;
+		padding: 0;
+		cursor: pointer;
+		white-space: nowrap;
+	}
+
+	.immersive-width-toggle:hover .meta-icon,
+	.immersive-width-toggle:hover .immersive-width-toggle-label {
+		color: var(--primary);
+	}
+</style>

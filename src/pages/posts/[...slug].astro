@@ -302,6 +302,7 @@ const seriesData = await getSeriesPosts(entry);
                 category={entry.data.category || undefined}
                 tags={entry.data.tags}
                 id={entry.id}
+                showImmersiveWidthToggle={true}
               />
             </div>
           </div>
@@ -390,6 +391,7 @@ const seriesData = await getSeriesPosts(entry);
               tags={entry.data.tags}
               category={entry.data.category || undefined}
               id={entry.id}
+              showImmersiveWidthToggle={true}
             />
             {
               !showPostCover && (
