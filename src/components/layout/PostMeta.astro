@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import UmamiPageViews from "@/components/analytics/UmamiPageViews.astro";
 import ImmersiveWidthToggle from "@/components/controls/ImmersiveWidthToggle.astro";
 import { analyticsConfig, commentConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
@@ -31,6 +32,7 @@ export interface Props {
 	showReadingTime?: boolean;
 	variant?: "default" | "cover";
 	showImmersiveWidthToggle?: boolean;
+	showUmamiViews?: boolean;
 }
 
 const {
@@ -57,9 +59,11 @@ const {
 	password,
 	variant = "default",
 	showImmersiveWidthToggle = false,
+	showUmamiViews = false,
 } = Astro.props;
 
 const path = customPath || (id ? `/posts/${id}` : "");
+const hasUmamiPageViews = Boolean(analyticsConfig.umamiAnalytics?.shareId);
 const visibleTags =
 	typeof maxTags === "number" ? tags?.slice(0, maxTags) : tags;
 ---
@@ -183,7 +187,8 @@ const visibleTags =
   }
 
   {
-    !isHome &&
+    !hasUmamiPageViews &&
+      !isHome &&
       commentConfig.type === "twikoo" &&
       commentConfig.twikoo?.visitorCount &&
       id && (
@@ -205,7 +210,8 @@ const visibleTags =
   }
 
   {
-    !isHome &&
+    !hasUmamiPageViews &&
+      !isHome &&
       commentConfig.type === "waline" &&
       commentConfig.waline?.visitorCount &&
       id && (
@@ -230,7 +236,8 @@ const visibleTags =
   }
 
   {
-    !isHome &&
+    !hasUmamiPageViews &&
+      !isHome &&
       commentConfig.type === "artalk" &&
       commentConfig.artalk?.visitorCount &&
       id && (
@@ -255,30 +262,9 @@ const visibleTags =
   }
 
   {
-    !isHome &&
-      analyticsConfig?.umamiAnalytics?.shareId &&
-      analyticsConfig?.umamiAnalytics?.shareApiBase &&
-      path && (
-        <div
-          class="flex items-center umami-pv-wrapper"
-          data-umami-pv-path={path}
-          data-umami-share-id={analyticsConfig.umamiAnalytics.shareId}
-          data-umami-api-base={analyticsConfig.umamiAnalytics.shareApiBase}
-        >
-          <div class="meta-icon">
-            <Icon
-              name="material-symbols:visibility-outline-rounded"
-              class="text-xl"
-            />
-          </div>
-          <span class="text-50 text-sm font-medium mr-1">
-            {i18n(I18nKey.pageViews)}
-          </span>
-          <span class="text-50 text-sm font-medium" data-umami-pv-value>
-            {i18n(I18nKey.pageViewsLoading)}
-          </span>
-        </div>
-      )
+    (showUmamiViews || hasUmamiPageViews) && id && (
+      <UmamiPageViews path={path} variant="meta" />
+    )
   }
 
   {
@@ -337,12 +323,12 @@ const visibleTags =
     flex-shrink: 0;
   }
 
-  .post-meta-cover .text-50,
-  .post-meta-cover .meta-divider {
+  .post-meta-cover :global(.text-50),
+  .post-meta-cover :global(.meta-divider) {
     color: rgb(255 255 255 / 0.9) !important;
   }
 
-  .post-meta-cover .meta-icon {
+  .post-meta-cover :global(.meta-icon) {
     width: 1.125rem;
     height: 1.125rem;
     margin-right: 0.375rem;
@@ -350,12 +336,12 @@ const visibleTags =
     color: rgb(255 255 255 / 0.9);
   }
 
-  .post-meta-cover .text-sm {
+  .post-meta-cover :global(.text-sm) {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 
-  .post-meta-cover .text-xl {
+  .post-meta-cover :global(.text-xl) {
     font-size: 1rem;
   }
 
@@ -383,5 +369,3 @@ const visibleTags =
     }
   }
 </style>
-
-<script src="@/scripts/umami-views.ts"></script>

@@ -26,7 +26,6 @@ const apiBase =
 				variant === "badge"
 					? "gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-100/60 dark:bg-neutral-800/50 text-xs transition"
 					: "",
-				variant === "meta" ? "gap-1" : "",
 				variant === "cover" ? "cover-pv-badge" : "",
 				className,
 			]}
@@ -34,10 +33,16 @@ const apiBase =
 			data-umami-share-id={shareId}
 			data-umami-api-base={apiBase}
 		>
-			<Icon
-				name="material-symbols:visibility-outline-rounded"
-				class={variant === "badge" ? "text-(--primary) text-base" : "text-xl"}
-			/>
+			{variant === "meta" ? (
+				<span class="meta-icon">
+					<Icon name="material-symbols:visibility-outline-rounded" class="text-xl" />
+				</span>
+			) : (
+				<Icon
+					name="material-symbols:visibility-outline-rounded"
+					class={variant === "badge" ? "text-(--primary) text-base" : "text-xl"}
+				/>
+			)}
 			<span
 				class:list={[
 					variant === "badge"

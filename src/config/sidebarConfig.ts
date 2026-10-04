@@ -147,7 +147,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 是否在文章详情页显示
 			showOnPostPage: true,
 		},
-		
+
 		{
 			// 组件类型：最新动态组件
 			type: "dynamic",
@@ -202,7 +202,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 是否在文章详情页显示
 			showOnPostPage: false,
 		},
-		
+
 		{
 			// 组件类型：侧边栏目录组件（只在文章详情页显示）
 			type: "sidebarToc",
@@ -271,7 +271,6 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 				},
 			},
 		},
-		
 	],
 
 	// 移动端底部组件配置列表
