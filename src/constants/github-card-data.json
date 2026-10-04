@@ -1,4 +1,10 @@
 {
+	"astrbotdevs/astrbot": {
+		"description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/197911947?v=4",
+		"license": "AGPL-3.0"
+	},
 	"cuteleaf/firefly": {
 		"description": "🍀Firefly, fresh and aesthetic Astro blog theme template. ",
 		"language": "Astro",

@@ -130,14 +130,37 @@ const projectsCollection: ContentCollection<ProjectData> = defineCollection({
 	}),
 });
 
+type ZiyuanData = {
+	title: string;
+	quotes: { text: string; author: string }[];
+};
+
+const ziyuanCollection: ContentCollection<ZiyuanData> = defineCollection({
+	loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/ziyuan" }),
+	schema: z.object({
+		title: z.string(),
+		quotes: z
+			.array(
+				z.object({
+					text: z.string(),
+					author: z.string(),
+				}),
+			)
+			.optional()
+			.default([]),
+	}),
+});
+
 export const collections: {
 	dynamic: typeof dynamicCollection;
 	posts: typeof postsCollection;
 	spec: typeof specCollection;
 	projects: typeof projectsCollection;
+	ziyuan: typeof ziyuanCollection;
 } = {
 	dynamic: dynamicCollection,
 	posts: postsCollection,
 	spec: specCollection,
 	projects: projectsCollection,
+	ziyuan: ziyuanCollection,
 };

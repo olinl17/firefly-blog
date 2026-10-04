@@ -91,6 +91,16 @@ declare global {
 		__floatingTOCAutoCloseInit?: boolean;
 		/** 文章列表页布局监听器守卫,确保只注册一次 */
 		__postPageInit?: boolean;
+		/** 时段问候组件初始化守卫 */
+		__timeGreetingInit?: boolean;
+		/** 时段问候背景图缓存 */
+		timeGreetingImage?: string;
+		/** 时段问候定时器引用 */
+		timeGreetingInterval?: ReturnType<typeof setInterval>;
+		/** 时间进度组件初始化守卫 */
+		__scheduleInit?: boolean;
+		/** 欢迎弹窗关闭回调 */
+		__closeWelcomeToast?: () => void;
 	}
 
 	interface MediaQueryList {

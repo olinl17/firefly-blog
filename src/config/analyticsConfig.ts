@@ -13,6 +13,10 @@ export const analyticsConfig: AnalyticsConfig = {
 		scriptUrl: "https://umami.olinl.com/olinl_u.js",
 		// Umami 会话回放脚本地址，支持使用自建
 		replaysScriptUrl: "https://umami.olinl.com/recorder.js",
+		// Umami 公开分享 ID，用于前端展示浏览量
+		shareId: "Z8ZeG4A7PW3FEp4S",
+		// Umami 实例地址，用于 Share API
+		shareApiBase: "https://umami.olinl.com",
 		// 是否追踪出站链接
 		trackOutboundLinks: true,
 		// 是否收集浏览器性能指标
