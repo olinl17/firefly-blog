@@ -55,6 +55,26 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 		},
 		{
+			// 组件类型：GitHub 贡献热力图组件
+			type: "githubHeatmap",
+			// 是否启用该组件
+			enable: true,
+			// 组件位置
+			position: "top",
+			// 是否在文章详情页显示
+			showOnPostPage: true,
+		},
+		{
+			// 组件类型：每日一言组件
+			type: "quoteOfTheDay",
+			// 是否启用该组件
+			enable: true,
+			// 组件位置
+			position: "top",
+			// 是否在文章详情页显示
+			showOnPostPage: true,
+		},
+		{
 			// 组件类型：音乐播放器
 			type: "music",
 			// 是否启用该组件
@@ -94,6 +114,25 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 				collapseThreshold: 10,
 			},
 		},
+		{
+			// 组件类型：日历组件
+			type: "calendar",
+			// 是否启用该组件
+			enable: true,
+			// 是否显示组件标题
+			showTitle: false,
+			// 组件位置
+			position: "sticky",
+			// 是否在文章详情页显示
+			showOnPostPage: false,
+			// 组件专属配置
+			specificConfig: {
+				calendar: {
+					// 是否显示年度文章热力图
+					showHeatmap: true,
+				},
+			},
+		},
 	],
 
 	// 右侧边栏组件配置列表
@@ -106,38 +145,9 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件位置
 			position: "top",
 			// 是否在文章详情页显示
-			showOnPostPage: false,
+			showOnPostPage: true,
 		},
-		{
-			// 组件类型：GitHub 贡献热力图组件
-			type: "githubHeatmap",
-			// 是否启用该组件
-			enable: true,
-			// 组件位置
-			position: "top",
-			// 是否在文章详情页显示
-			showOnPostPage: false,
-		},
-		{
-			// 组件类型：时间进度与节假日倒计时组件
-			type: "schedule",
-			// 是否启用该组件
-			enable: true,
-			// 组件位置
-			position: "top",
-			// 是否在文章详情页显示
-			showOnPostPage: false,
-		},
-		{
-			// 组件类型：每日一言组件
-			type: "quoteOfTheDay",
-			// 是否启用该组件
-			enable: true,
-			// 组件位置
-			position: "top",
-			// 是否在文章详情页显示
-			showOnPostPage: false,
-		},
+		
 		{
 			// 组件类型：最新动态组件
 			type: "dynamic",
@@ -183,24 +193,16 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			},
 		},
 		{
-			// 组件类型：日历组件
-			type: "calendar",
+			// 组件类型：时间进度与节假日倒计时组件
+			type: "schedule",
 			// 是否启用该组件
 			enable: true,
-			// 是否显示组件标题
-			showTitle: false,
 			// 组件位置
-			position: "sticky",
+			position: "top",
 			// 是否在文章详情页显示
 			showOnPostPage: false,
-			// 组件专属配置
-			specificConfig: {
-				calendar: {
-					// 是否显示年度文章热力图
-					showHeatmap: true,
-				},
-			},
 		},
+		
 		{
 			// 组件类型：侧边栏目录组件（只在文章详情页显示）
 			type: "sidebarToc",
@@ -269,6 +271,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 				},
 			},
 		},
+		
 	],
 
 	// 移动端底部组件配置列表
