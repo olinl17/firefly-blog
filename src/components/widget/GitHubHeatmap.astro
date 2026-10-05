@@ -198,7 +198,7 @@ const { class: className, style } = Astro.props;
 const calendarData = await loadCalendarData();
 const weeks = buildWeeks(calendarData.days);
 
-const opacityLevels = ["0", "0.45", "0.65", "0.85", "1"];
+const mixLevels = ["10%", "55%", "75%", "90%", "100%"];
 ---
 
 <WidgetLayout id="github-heatmap" class={`${className} !overflow-visible`} style={style}>
@@ -227,11 +227,7 @@ const opacityLevels = ["0", "0.45", "0.65", "0.85", "1"];
 								day ? (
 									<div
 										class="ghc-day"
-										style={
-											day.count === 0
-												? "background-color: var(--btn-plain-bg-hover)"
-												: `background-color: var(--primary); opacity: ${opacityLevels[day.level]}`
-										}
+										style={`--ghc-level: ${mixLevels[day.level]}; background-color: color-mix(in oklch, var(--primary) var(--ghc-level), var(--btn-plain-bg-hover));`}
 										data-tooltip={day.tooltip}
 									/>
 								) : (
