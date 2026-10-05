@@ -1,4 +1,6 @@
 ---
+import fs from "node:fs/promises";
+import path from "node:path";
 import { Icon } from "astro-icon/components";
 import WidgetLayout from "@/components/common/WidgetLayout.astro";
 
@@ -6,6 +8,11 @@ const githubUsername = "olinl17";
 const githubProfileUrl = `https://github.com/${githubUsername}`;
 
 const HEATMAP_DAYS = 100;
+const CACHE_FILE = path.resolve(
+	process.cwd(),
+	"src/constants/github-heatmap-data.json",
+);
+const CACHE_TTL_MS = 1000 * 60 * 60 * 6; // 6 hours
 
 type ContributionDay = {
 	date: string;
@@ -42,11 +49,52 @@ function formatTooltipDate(date: string) {
 	});
 }
 
-async function getCalendarData(username: string): Promise<CalendarData> {
-	try {
-		const controller = new AbortController();
-		const timeoutId = setTimeout(() => controller.abort(), 8000);
+function buildCalendarDataFromApi(json: {
+	contributions?: Array<{ date: string; count?: number; level?: number }>;
+}): CalendarData {
+	const today = new Date();
+	const endDate = new Date(
+		Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()),
+	);
+	const startDate = new Date(endDate);
+	startDate.setUTCDate(startDate.getUTCDate() - (HEATMAP_DAYS - 1));
 
+	const dayMap = new Map<string, { count: number; level: number }>();
+	if (json.contributions && Array.isArray(json.contributions)) {
+		for (const entry of json.contributions) {
+			dayMap.set(entry.date, {
+				count: entry.count ?? 0,
+				level: entry.level ?? 0,
+			});
+		}
+	}
+
+	const days: ContributionDay[] = [];
+	for (let d = new Date(startDate); d <= endDate; d = addDays(d, 1)) {
+		const date = formatISODate(d);
+		const data = dayMap.get(date) || { count: 0, level: 0 };
+		days.push({
+			date,
+			count: data.count,
+			level: data.level,
+			tooltip:
+				data.count > 0
+					? `${formatTooltipDate(date)} · ${data.count} 次提交`
+					: `${formatTooltipDate(date)} · 无提交`,
+		});
+	}
+
+	const totalContributions = days.reduce((s, d) => s + d.count, 0);
+	const activeDays = days.filter((d) => d.count > 0).length;
+
+	return { days, totalContributions, activeDays };
+}
+
+async function fetchCalendarData(username: string): Promise<CalendarData> {
+	const controller = new AbortController();
+	const timeoutId = setTimeout(() => controller.abort(), 8000);
+
+	try {
 		const response = await fetch(
 			`https://github-contributions-api.jogruber.de/v4/${username}?y=last`,
 			{ signal: controller.signal },
@@ -55,47 +103,60 @@ async function getCalendarData(username: string): Promise<CalendarData> {
 
 		if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-		const json = await response.json();
+		const json = (await response.json()) as {
+			contributions?: Array<{ date: string; count?: number; level?: number }>;
+		};
+		const data = buildCalendarDataFromApi(json);
 
-		const today = new Date();
-		const endDate = new Date(
-			Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()),
-		);
-		const startDate = new Date(endDate);
-		startDate.setUTCDate(startDate.getUTCDate() - (HEATMAP_DAYS - 1));
-
-		const dayMap = new Map<string, { count: number; level: number }>();
-		if (json.contributions && Array.isArray(json.contributions)) {
-			for (const entry of json.contributions) {
-				dayMap.set(entry.date, {
-					count: entry.count ?? 0,
-					level: entry.level ?? 0,
-				});
-			}
+		try {
+			await fs.mkdir(path.dirname(CACHE_FILE), { recursive: true });
+			await fs.writeFile(CACHE_FILE, JSON.stringify(data, null, 2));
+		} catch (e) {
+			console.error("[GitHubHeatmap] failed to write cache:", e);
 		}
 
-		const days: ContributionDay[] = [];
-		for (let d = new Date(startDate); d <= endDate; d = addDays(d, 1)) {
-			const date = formatISODate(d);
-			const data = dayMap.get(date) || { count: 0, level: 0 };
-			days.push({
-				date,
-				count: data.count,
-				level: data.level,
-				tooltip:
-					data.count > 0
-						? `${formatTooltipDate(date)} · ${data.count} 次提交`
-						: `${formatTooltipDate(date)} · 无提交`,
-			});
-		}
-
-		const totalContributions = days.reduce((s, d) => s + d.count, 0);
-		const activeDays = days.filter((d) => d.count > 0).length;
-
-		return { days, totalContributions, activeDays };
-	} catch {
-		return { days: [], totalContributions: 0, activeDays: 0 };
+		return data;
+	} catch (error) {
+		clearTimeout(timeoutId);
+		console.error("[GitHubHeatmap] failed to fetch calendar data:", error);
+		throw error;
 	}
+}
+
+async function readCache(): Promise<CalendarData | null> {
+	try {
+		const raw = await fs.readFile(CACHE_FILE, "utf-8");
+		const parsed = JSON.parse(raw) as CalendarData;
+		if (parsed.days && parsed.days.length > 0) return parsed;
+	} catch {
+		// cache missing or unreadable
+	}
+	return null;
+}
+
+let fetchPromise: Promise<CalendarData> | null = null;
+
+async function loadCalendarData(): Promise<CalendarData> {
+	// 1. Use fresh cache if available.
+	try {
+		const stat = await fs.stat(CACHE_FILE);
+		const age = Date.now() - stat.mtimeMs;
+		if (age < CACHE_TTL_MS) {
+			const cached = await readCache();
+			if (cached) return cached;
+		}
+	} catch {
+		// cache missing or unreadable
+	}
+
+	// 2. Fetch from API once per build, with stale-cache fallback.
+	if (!fetchPromise) {
+		fetchPromise = fetchCalendarData(githubUsername).catch(async () => {
+			const stale = await readCache();
+			return stale ?? { days: [], totalContributions: 0, activeDays: 0 };
+		});
+	}
+	return fetchPromise;
 }
 
 function buildWeeks(days: ContributionDay[]) {
@@ -134,7 +195,7 @@ export interface Props {
 }
 
 const { class: className, style } = Astro.props;
-const calendarData = await getCalendarData(githubUsername);
+const calendarData = await loadCalendarData();
 const weeks = buildWeeks(calendarData.days);
 
 const opacityLevels = ["0", "0.45", "0.65", "0.85", "1"];

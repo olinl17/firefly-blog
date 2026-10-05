@@ -223,9 +223,9 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true,
 	},
 	{
-		title: "笔尖代码",
+		title: "万象存笺",
 		imgurl: "https://3z.ink/assets/images/logo-v2.png",
-		desc: "笔尖代码 - 一份汇聚前端、后端、数据库、运维、系统知识的个人技术文档库",
+		desc: "万象存笺 - 一个汇聚了前端、后端、数据库、运维、系统知识等内容的网络日志",
 		siteurl: "https://3z.ink/",
 		tags: ["PHP", "EdgeOne"],
 		weight: 17,
