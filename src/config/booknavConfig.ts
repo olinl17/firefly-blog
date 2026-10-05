@@ -68,22 +68,6 @@ export const booknavConfig: BooknavGroup[] = [
 		],
 	},
 	{
-		id: "opensource",
-		name: "项目",
-		icon: "material-symbols:code-rounded",
-		desc: "好用的开源项目",
-		weight: 90,
-		items: [
-			{
-				title: "Firefly",
-				url: "https://github.com/CuteLeaf/Firefly",
-				desc: "清晰美观的 Astro 个人博客主题模板",
-				icon: "/favicon/firefly-32.png",
-				weight: 10,
-			},
-		],
-	},
-	{
 		id: "design",
 		name: "设计",
 		icon: "material-symbols:palette-outline-rounded",

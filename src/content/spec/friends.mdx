@@ -8,20 +8,20 @@ description: "与优秀的朋友们一起成长"
 {/* ========== 站点信息 ========= */}
 
 export const site = {
-  name: "夏夜流萤",
-  desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
-  url: "https://blog.cuteleaf.cn",
-  avatar: "https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
-  email: "xiaye@msn.com",
+  name: "Olinl's Blog",
+  desc: "分享、实践、学习",
+  url: "https://www.olinl.com",
+  avatar: "https://www.olinl.com/assets/images/avatar.webp",
+  email: "olinl@foxmail.com",
 };
 
 {/* ========= 注意事项 ========== */}
 
 export const notes = [
-  { title: "互换原则", content: "请先将本站添加到您的友链页面，确认后会添加您的友链" },
-  { title: "链接维护", content: "友链网站长期无法访问或内容违规，将会被移除" },
-  { title: "内容要求", content: "内容积极向上，不含有任何含色情/反动/暴力等违法违规内容" },
-  { title: "站点要求", content: "支持 HTTPS，以原创内容为主，能够正常访问且有持续更新" },
+  { title: "先加我再申请", content: "麻烦先在你的友链页放一下本站，我看到后就把你加上" },
+  { title: "来者不拒", content: "个人博客、笔记站、作品集都欢迎，不一定非得是技术博客" },
+  { title: "保持联系", content: "如果站点挂了或者换域名了，吱一声我好更新，长期失联可能会先撤下" },
+  { title: "唯一的底线", content: "别是垃圾广告站或者违法违规内容就行，其他都好商量" },
 ];
 
 {/* ============================= */}
@@ -35,8 +35,9 @@ export const notes = [
         <div class="flex items-center gap-4 mb-5">
           <div class="relative shrink-0">
             <div class="w-16 h-16 rounded-xl overflow-hidden ring-2 ring-(--primary)/20">
+            {/*  src={site.avatar} */}
               <img
-                src={site.avatar}
+                src="/assets/images/avatar.webp"
                 alt={site.name}
                 class="w-full h-full object-cover"
               />
