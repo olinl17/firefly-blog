@@ -46,7 +46,8 @@ const { class: className, style } = Astro.props;
 
 		const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 		if (!window.timeGreetingImage) {
-			window.timeGreetingImage = `https://random-api.czl.net/pic/fj?t=${new Date().getTime()}`;
+			// window.timeGreetingImage = `https://random-api.czl.net/pic/fj?t=${new Date().getTime()}`;
+			window.timeGreetingImage = `https://pic.olinl.com/random/h?t=${new Date().getTime()}`;
 		}
 		function updateTimeGreeting() {
 			const now = new Date();
@@ -59,22 +60,22 @@ const { class: className, style } = Astro.props;
 			let greeting = "";
 			let period = "";
 			if (hours >= 0 && hours < 6) {
-				greeting = "夜深了，早点休息！";
+				greeting = "还没睡？反正明天也不会更好。";
 				period = "night";
 			} else if (hours >= 6 && hours < 9) {
-				greeting = "早上好，新的一天！";
+				greeting = "天亮了，又是重复的一天。";
 				period = "morning";
 			} else if (hours >= 9 && hours < 12) {
-				greeting = "上午好，充满活力！";
+				greeting = "上午好，假装努力的样子真累。";
 				period = "noon";
 			} else if (hours >= 12 && hours < 14) {
-				greeting = "中午好，记得午休！";
+				greeting = "午饭时间，吃饱了继续熬。";
 				period = "noon";
 			} else if (hours >= 14 && hours < 18) {
-				greeting = "下午好，继续加油！";
+				greeting = "下午好，时间在毫无意义地流逝。";
 				period = "noon";
 			} else if (hours >= 18 && hours < 24) {
-				greeting = "晚上好，放松一下！";
+				greeting = "晚上好，终于又熬完了一天。";
 				period = "evening";
 			}
 			document.querySelectorAll(".date-day").forEach((e) => (e.textContent = day));

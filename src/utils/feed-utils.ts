@@ -10,6 +10,30 @@ import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import sanitizeHtml from "sanitize-html";
 
 /**
+ * 将排除路径归一化为文章 ID。
+ * 支持 "/posts/foo/"、"/posts/foo"、"foo" 等写法。
+ */
+export function normalizeExcludedPath(path: string): string {
+	return path
+		.replace(/^\/posts\//, "")
+		.replace(/^\//, "")
+		.replace(/\/$/, "");
+}
+
+/**
+ * 根据配置中的 excludedPaths 过滤文章。
+ */
+export function filterExcludedPosts(
+	posts: CollectionEntry<"posts">[],
+	excludedPaths: string[] | undefined,
+): CollectionEntry<"posts">[] {
+	if (!excludedPaths || excludedPaths.length === 0) return posts;
+
+	const excludedIds = new Set(excludedPaths.map(normalizeExcludedPath));
+	return posts.filter((post) => !excludedIds.has(post.id));
+}
+
+/**
  * 归一化后的 feed 条目，供 RSS 与 Atom 共用。
  */
 export type FeedEntry = {

@@ -9,7 +9,7 @@ export const profileConfig: ProfileConfig = {
 	avatar: "/assets/images/avatar.webp",
 
 	// 名字
-	name: "顾拾柒",
+	name: "麦芽糖很甜",
 
 	// 个人签名
 	bio: "The world is big, you have to go and see.",

@@ -43,6 +43,9 @@ export type SiteConfig = {
 		defaultMode?: LIGHT_DARK_MODE; // 默认模式：浅色、深色或跟随系统
 	};
 
+	// 是否启用全站灰色模式
+	grayscale?: boolean;
+
 	// 页面整体宽度（单位：rem）
 	pageWidth?: number;
 
@@ -254,5 +257,13 @@ export type SiteConfig = {
 		 * - "summary": 仅包含文章摘要/描述，不含正文
 		 */
 		contentMode?: "full" | "summary";
+		/**
+		 * 需要从 RSS / Atom 订阅中屏蔽的文章路径或 ID 列表。
+		 * 支持以下写法：
+		 * - "/posts/qq-group/"
+		 * - "/posts/qq-group"
+		 * - "qq-group"
+		 */
+		excludedPaths?: string[];
 	};
 };

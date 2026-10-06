@@ -75,6 +75,9 @@ export const siteConfig: SiteConfig = {
 		defaultMode: "system",
 	},
 
+	// 是否启用全站灰色模式
+	grayscale: true,
+
 	// 页面整体宽度（单位：rem）
 	// 数值越大可以让页面内容区域更宽
 	// 在使用单侧栏边栏时，建议调低一些宽度以获得更好的视觉效果。
@@ -357,6 +360,10 @@ export const siteConfig: SiteConfig = {
 		// - "full": 包含文章正文全文（默认）
 		// - "summary": 仅包含文章摘要/描述，不含正文，体积更小
 		contentMode: "full",
+
+		// 需要从 RSS / Atom 订阅中屏蔽的文章路径或 ID 列表
+		// 支持 "/posts/qq-group/"、"/posts/qq-group" 或 "qq-group" 等写法
+		excludedPaths: ["/posts/qq-group"],
 	},
 
 	// 站点语言，在本配置文件顶部SITE_LANG定义
