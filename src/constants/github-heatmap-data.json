@@ -1,606 +1,606 @@
 {
-	"days": [
-		{
-			"date": "2026-06-28",
-			"count": 0,
-			"level": 0,
-			"tooltip": "6月28日 · 无提交"
-		},
-		{
-			"date": "2026-06-29",
-			"count": 0,
-			"level": 0,
-			"tooltip": "6月29日 · 无提交"
-		},
-		{
-			"date": "2026-06-30",
-			"count": 0,
-			"level": 0,
-			"tooltip": "6月30日 · 无提交"
-		},
-		{
-			"date": "2026-07-01",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月1日 · 无提交"
-		},
-		{
-			"date": "2026-07-02",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月2日 · 无提交"
-		},
-		{
-			"date": "2026-07-03",
-			"count": 3,
-			"level": 1,
-			"tooltip": "7月3日 · 3 次提交"
-		},
-		{
-			"date": "2026-07-04",
-			"count": 11,
-			"level": 3,
-			"tooltip": "7月4日 · 11 次提交"
-		},
-		{
-			"date": "2026-07-05",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月5日 · 无提交"
-		},
-		{
-			"date": "2026-07-06",
-			"count": 2,
-			"level": 1,
-			"tooltip": "7月6日 · 2 次提交"
-		},
-		{
-			"date": "2026-07-07",
-			"count": 5,
-			"level": 1,
-			"tooltip": "7月7日 · 5 次提交"
-		},
-		{
-			"date": "2026-07-08",
-			"count": 1,
-			"level": 1,
-			"tooltip": "7月8日 · 1 次提交"
-		},
-		{
-			"date": "2026-07-09",
-			"count": 2,
-			"level": 1,
-			"tooltip": "7月9日 · 2 次提交"
-		},
-		{
-			"date": "2026-07-10",
-			"count": 4,
-			"level": 1,
-			"tooltip": "7月10日 · 4 次提交"
-		},
-		{
-			"date": "2026-07-11",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月11日 · 无提交"
-		},
-		{
-			"date": "2026-07-12",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月12日 · 无提交"
-		},
-		{
-			"date": "2026-07-13",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月13日 · 无提交"
-		},
-		{
-			"date": "2026-07-14",
-			"count": 2,
-			"level": 1,
-			"tooltip": "7月14日 · 2 次提交"
-		},
-		{
-			"date": "2026-07-15",
-			"count": 5,
-			"level": 1,
-			"tooltip": "7月15日 · 5 次提交"
-		},
-		{
-			"date": "2026-07-16",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月16日 · 无提交"
-		},
-		{
-			"date": "2026-07-17",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月17日 · 无提交"
-		},
-		{
-			"date": "2026-07-18",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月18日 · 无提交"
-		},
-		{
-			"date": "2026-07-19",
-			"count": 10,
-			"level": 2,
-			"tooltip": "7月19日 · 10 次提交"
-		},
-		{
-			"date": "2026-07-20",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月20日 · 无提交"
-		},
-		{
-			"date": "2026-07-21",
-			"count": 21,
-			"level": 4,
-			"tooltip": "7月21日 · 21 次提交"
-		},
-		{
-			"date": "2026-07-22",
-			"count": 9,
-			"level": 2,
-			"tooltip": "7月22日 · 9 次提交"
-		},
-		{
-			"date": "2026-07-23",
-			"count": 7,
-			"level": 2,
-			"tooltip": "7月23日 · 7 次提交"
-		},
-		{
-			"date": "2026-07-24",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月24日 · 无提交"
-		},
-		{
-			"date": "2026-07-25",
-			"count": 5,
-			"level": 1,
-			"tooltip": "7月25日 · 5 次提交"
-		},
-		{
-			"date": "2026-07-26",
-			"count": 4,
-			"level": 1,
-			"tooltip": "7月26日 · 4 次提交"
-		},
-		{
-			"date": "2026-07-27",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月27日 · 无提交"
-		},
-		{
-			"date": "2026-07-28",
-			"count": 5,
-			"level": 1,
-			"tooltip": "7月28日 · 5 次提交"
-		},
-		{
-			"date": "2026-07-29",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月29日 · 无提交"
-		},
-		{
-			"date": "2026-07-30",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月30日 · 无提交"
-		},
-		{
-			"date": "2026-07-31",
-			"count": 0,
-			"level": 0,
-			"tooltip": "7月31日 · 无提交"
-		},
-		{
-			"date": "2026-08-01",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月1日 · 无提交"
-		},
-		{
-			"date": "2026-08-02",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月2日 · 无提交"
-		},
-		{
-			"date": "2026-08-03",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月3日 · 无提交"
-		},
-		{
-			"date": "2026-08-04",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月4日 · 无提交"
-		},
-		{
-			"date": "2026-08-05",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月5日 · 无提交"
-		},
-		{
-			"date": "2026-08-06",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月6日 · 无提交"
-		},
-		{
-			"date": "2026-08-07",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月7日 · 无提交"
-		},
-		{
-			"date": "2026-08-08",
-			"count": 1,
-			"level": 1,
-			"tooltip": "8月8日 · 1 次提交"
-		},
-		{
-			"date": "2026-08-09",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月9日 · 无提交"
-		},
-		{
-			"date": "2026-08-10",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月10日 · 无提交"
-		},
-		{
-			"date": "2026-08-11",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月11日 · 无提交"
-		},
-		{
-			"date": "2026-08-12",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月12日 · 无提交"
-		},
-		{
-			"date": "2026-08-13",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月13日 · 无提交"
-		},
-		{
-			"date": "2026-08-14",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月14日 · 无提交"
-		},
-		{
-			"date": "2026-08-15",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月15日 · 无提交"
-		},
-		{
-			"date": "2026-08-16",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月16日 · 无提交"
-		},
-		{
-			"date": "2026-08-17",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月17日 · 无提交"
-		},
-		{
-			"date": "2026-08-18",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月18日 · 无提交"
-		},
-		{
-			"date": "2026-08-19",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月19日 · 无提交"
-		},
-		{
-			"date": "2026-08-20",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月20日 · 无提交"
-		},
-		{
-			"date": "2026-08-21",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月21日 · 无提交"
-		},
-		{
-			"date": "2026-08-22",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月22日 · 无提交"
-		},
-		{
-			"date": "2026-08-23",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月23日 · 无提交"
-		},
-		{
-			"date": "2026-08-24",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月24日 · 无提交"
-		},
-		{
-			"date": "2026-08-25",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月25日 · 无提交"
-		},
-		{
-			"date": "2026-08-26",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月26日 · 无提交"
-		},
-		{
-			"date": "2026-08-27",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月27日 · 无提交"
-		},
-		{
-			"date": "2026-08-28",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月28日 · 无提交"
-		},
-		{
-			"date": "2026-08-29",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月29日 · 无提交"
-		},
-		{
-			"date": "2026-08-30",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月30日 · 无提交"
-		},
-		{
-			"date": "2026-08-31",
-			"count": 0,
-			"level": 0,
-			"tooltip": "8月31日 · 无提交"
-		},
-		{
-			"date": "2026-09-01",
-			"count": 1,
-			"level": 1,
-			"tooltip": "9月1日 · 1 次提交"
-		},
-		{
-			"date": "2026-09-02",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月2日 · 无提交"
-		},
-		{
-			"date": "2026-09-03",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月3日 · 无提交"
-		},
-		{
-			"date": "2026-09-04",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月4日 · 无提交"
-		},
-		{
-			"date": "2026-09-05",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月5日 · 无提交"
-		},
-		{
-			"date": "2026-09-06",
-			"count": 3,
-			"level": 1,
-			"tooltip": "9月6日 · 3 次提交"
-		},
-		{
-			"date": "2026-09-07",
-			"count": 7,
-			"level": 2,
-			"tooltip": "9月7日 · 7 次提交"
-		},
-		{
-			"date": "2026-09-08",
-			"count": 6,
-			"level": 2,
-			"tooltip": "9月8日 · 6 次提交"
-		},
-		{
-			"date": "2026-09-09",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月9日 · 无提交"
-		},
-		{
-			"date": "2026-09-10",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月10日 · 无提交"
-		},
-		{
-			"date": "2026-09-11",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月11日 · 无提交"
-		},
-		{
-			"date": "2026-09-12",
-			"count": 2,
-			"level": 1,
-			"tooltip": "9月12日 · 2 次提交"
-		},
-		{
-			"date": "2026-09-13",
-			"count": 6,
-			"level": 2,
-			"tooltip": "9月13日 · 6 次提交"
-		},
-		{
-			"date": "2026-09-14",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月14日 · 无提交"
-		},
-		{
-			"date": "2026-09-15",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月15日 · 无提交"
-		},
-		{
-			"date": "2026-09-16",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月16日 · 无提交"
-		},
-		{
-			"date": "2026-09-17",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月17日 · 无提交"
-		},
-		{
-			"date": "2026-09-18",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月18日 · 无提交"
-		},
-		{
-			"date": "2026-09-19",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月19日 · 无提交"
-		},
-		{
-			"date": "2026-09-20",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月20日 · 无提交"
-		},
-		{
-			"date": "2026-09-21",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月21日 · 无提交"
-		},
-		{
-			"date": "2026-09-22",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月22日 · 无提交"
-		},
-		{
-			"date": "2026-09-23",
-			"count": 1,
-			"level": 1,
-			"tooltip": "9月23日 · 1 次提交"
-		},
-		{
-			"date": "2026-09-24",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月24日 · 无提交"
-		},
-		{
-			"date": "2026-09-25",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月25日 · 无提交"
-		},
-		{
-			"date": "2026-09-26",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月26日 · 无提交"
-		},
-		{
-			"date": "2026-09-27",
-			"count": 1,
-			"level": 1,
-			"tooltip": "9月27日 · 1 次提交"
-		},
-		{
-			"date": "2026-09-28",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月28日 · 无提交"
-		},
-		{
-			"date": "2026-09-29",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月29日 · 无提交"
-		},
-		{
-			"date": "2026-09-30",
-			"count": 0,
-			"level": 0,
-			"tooltip": "9月30日 · 无提交"
-		},
-		{
-			"date": "2026-10-01",
-			"count": 0,
-			"level": 0,
-			"tooltip": "10月1日 · 无提交"
-		},
-		{
-			"date": "2026-10-02",
-			"count": 0,
-			"level": 0,
-			"tooltip": "10月2日 · 无提交"
-		},
-		{
-			"date": "2026-10-03",
-			"count": 0,
-			"level": 0,
-			"tooltip": "10月3日 · 无提交"
-		},
-		{
-			"date": "2026-10-04",
-			"count": 0,
-			"level": 0,
-			"tooltip": "10月4日 · 无提交"
-		},
-		{
-			"date": "2026-10-05",
-			"count": 0,
-			"level": 0,
-			"tooltip": "10月5日 · 无提交"
-		}
-	],
-	"totalContributions": 124,
-	"activeDays": 25
+  "days": [
+    {
+      "date": "2026-06-30",
+      "count": 0,
+      "level": 0,
+      "tooltip": "6月30日 · 无提交"
+    },
+    {
+      "date": "2026-07-01",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月1日 · 无提交"
+    },
+    {
+      "date": "2026-07-02",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月2日 · 无提交"
+    },
+    {
+      "date": "2026-07-03",
+      "count": 3,
+      "level": 1,
+      "tooltip": "7月3日 · 3 次提交"
+    },
+    {
+      "date": "2026-07-04",
+      "count": 11,
+      "level": 3,
+      "tooltip": "7月4日 · 11 次提交"
+    },
+    {
+      "date": "2026-07-05",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月5日 · 无提交"
+    },
+    {
+      "date": "2026-07-06",
+      "count": 2,
+      "level": 1,
+      "tooltip": "7月6日 · 2 次提交"
+    },
+    {
+      "date": "2026-07-07",
+      "count": 5,
+      "level": 1,
+      "tooltip": "7月7日 · 5 次提交"
+    },
+    {
+      "date": "2026-07-08",
+      "count": 1,
+      "level": 1,
+      "tooltip": "7月8日 · 1 次提交"
+    },
+    {
+      "date": "2026-07-09",
+      "count": 2,
+      "level": 1,
+      "tooltip": "7月9日 · 2 次提交"
+    },
+    {
+      "date": "2026-07-10",
+      "count": 4,
+      "level": 1,
+      "tooltip": "7月10日 · 4 次提交"
+    },
+    {
+      "date": "2026-07-11",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月11日 · 无提交"
+    },
+    {
+      "date": "2026-07-12",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月12日 · 无提交"
+    },
+    {
+      "date": "2026-07-13",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月13日 · 无提交"
+    },
+    {
+      "date": "2026-07-14",
+      "count": 2,
+      "level": 1,
+      "tooltip": "7月14日 · 2 次提交"
+    },
+    {
+      "date": "2026-07-15",
+      "count": 5,
+      "level": 1,
+      "tooltip": "7月15日 · 5 次提交"
+    },
+    {
+      "date": "2026-07-16",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月16日 · 无提交"
+    },
+    {
+      "date": "2026-07-17",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月17日 · 无提交"
+    },
+    {
+      "date": "2026-07-18",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月18日 · 无提交"
+    },
+    {
+      "date": "2026-07-19",
+      "count": 10,
+      "level": 2,
+      "tooltip": "7月19日 · 10 次提交"
+    },
+    {
+      "date": "2026-07-20",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月20日 · 无提交"
+    },
+    {
+      "date": "2026-07-21",
+      "count": 21,
+      "level": 4,
+      "tooltip": "7月21日 · 21 次提交"
+    },
+    {
+      "date": "2026-07-22",
+      "count": 9,
+      "level": 2,
+      "tooltip": "7月22日 · 9 次提交"
+    },
+    {
+      "date": "2026-07-23",
+      "count": 7,
+      "level": 2,
+      "tooltip": "7月23日 · 7 次提交"
+    },
+    {
+      "date": "2026-07-24",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月24日 · 无提交"
+    },
+    {
+      "date": "2026-07-25",
+      "count": 5,
+      "level": 1,
+      "tooltip": "7月25日 · 5 次提交"
+    },
+    {
+      "date": "2026-07-26",
+      "count": 4,
+      "level": 1,
+      "tooltip": "7月26日 · 4 次提交"
+    },
+    {
+      "date": "2026-07-27",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月27日 · 无提交"
+    },
+    {
+      "date": "2026-07-28",
+      "count": 5,
+      "level": 1,
+      "tooltip": "7月28日 · 5 次提交"
+    },
+    {
+      "date": "2026-07-29",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月29日 · 无提交"
+    },
+    {
+      "date": "2026-07-30",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月30日 · 无提交"
+    },
+    {
+      "date": "2026-07-31",
+      "count": 0,
+      "level": 0,
+      "tooltip": "7月31日 · 无提交"
+    },
+    {
+      "date": "2026-08-01",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月1日 · 无提交"
+    },
+    {
+      "date": "2026-08-02",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月2日 · 无提交"
+    },
+    {
+      "date": "2026-08-03",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月3日 · 无提交"
+    },
+    {
+      "date": "2026-08-04",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月4日 · 无提交"
+    },
+    {
+      "date": "2026-08-05",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月5日 · 无提交"
+    },
+    {
+      "date": "2026-08-06",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月6日 · 无提交"
+    },
+    {
+      "date": "2026-08-07",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月7日 · 无提交"
+    },
+    {
+      "date": "2026-08-08",
+      "count": 1,
+      "level": 1,
+      "tooltip": "8月8日 · 1 次提交"
+    },
+    {
+      "date": "2026-08-09",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月9日 · 无提交"
+    },
+    {
+      "date": "2026-08-10",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月10日 · 无提交"
+    },
+    {
+      "date": "2026-08-11",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月11日 · 无提交"
+    },
+    {
+      "date": "2026-08-12",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月12日 · 无提交"
+    },
+    {
+      "date": "2026-08-13",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月13日 · 无提交"
+    },
+    {
+      "date": "2026-08-14",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月14日 · 无提交"
+    },
+    {
+      "date": "2026-08-15",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月15日 · 无提交"
+    },
+    {
+      "date": "2026-08-16",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月16日 · 无提交"
+    },
+    {
+      "date": "2026-08-17",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月17日 · 无提交"
+    },
+    {
+      "date": "2026-08-18",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月18日 · 无提交"
+    },
+    {
+      "date": "2026-08-19",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月19日 · 无提交"
+    },
+    {
+      "date": "2026-08-20",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月20日 · 无提交"
+    },
+    {
+      "date": "2026-08-21",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月21日 · 无提交"
+    },
+    {
+      "date": "2026-08-22",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月22日 · 无提交"
+    },
+    {
+      "date": "2026-08-23",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月23日 · 无提交"
+    },
+    {
+      "date": "2026-08-24",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月24日 · 无提交"
+    },
+    {
+      "date": "2026-08-25",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月25日 · 无提交"
+    },
+    {
+      "date": "2026-08-26",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月26日 · 无提交"
+    },
+    {
+      "date": "2026-08-27",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月27日 · 无提交"
+    },
+    {
+      "date": "2026-08-28",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月28日 · 无提交"
+    },
+    {
+      "date": "2026-08-29",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月29日 · 无提交"
+    },
+    {
+      "date": "2026-08-30",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月30日 · 无提交"
+    },
+    {
+      "date": "2026-08-31",
+      "count": 0,
+      "level": 0,
+      "tooltip": "8月31日 · 无提交"
+    },
+    {
+      "date": "2026-09-01",
+      "count": 1,
+      "level": 1,
+      "tooltip": "9月1日 · 1 次提交"
+    },
+    {
+      "date": "2026-09-02",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月2日 · 无提交"
+    },
+    {
+      "date": "2026-09-03",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月3日 · 无提交"
+    },
+    {
+      "date": "2026-09-04",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月4日 · 无提交"
+    },
+    {
+      "date": "2026-09-05",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月5日 · 无提交"
+    },
+    {
+      "date": "2026-09-06",
+      "count": 3,
+      "level": 1,
+      "tooltip": "9月6日 · 3 次提交"
+    },
+    {
+      "date": "2026-09-07",
+      "count": 7,
+      "level": 2,
+      "tooltip": "9月7日 · 7 次提交"
+    },
+    {
+      "date": "2026-09-08",
+      "count": 6,
+      "level": 2,
+      "tooltip": "9月8日 · 6 次提交"
+    },
+    {
+      "date": "2026-09-09",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月9日 · 无提交"
+    },
+    {
+      "date": "2026-09-10",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月10日 · 无提交"
+    },
+    {
+      "date": "2026-09-11",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月11日 · 无提交"
+    },
+    {
+      "date": "2026-09-12",
+      "count": 2,
+      "level": 1,
+      "tooltip": "9月12日 · 2 次提交"
+    },
+    {
+      "date": "2026-09-13",
+      "count": 6,
+      "level": 2,
+      "tooltip": "9月13日 · 6 次提交"
+    },
+    {
+      "date": "2026-09-14",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月14日 · 无提交"
+    },
+    {
+      "date": "2026-09-15",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月15日 · 无提交"
+    },
+    {
+      "date": "2026-09-16",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月16日 · 无提交"
+    },
+    {
+      "date": "2026-09-17",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月17日 · 无提交"
+    },
+    {
+      "date": "2026-09-18",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月18日 · 无提交"
+    },
+    {
+      "date": "2026-09-19",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月19日 · 无提交"
+    },
+    {
+      "date": "2026-09-20",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月20日 · 无提交"
+    },
+    {
+      "date": "2026-09-21",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月21日 · 无提交"
+    },
+    {
+      "date": "2026-09-22",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月22日 · 无提交"
+    },
+    {
+      "date": "2026-09-23",
+      "count": 1,
+      "level": 1,
+      "tooltip": "9月23日 · 1 次提交"
+    },
+    {
+      "date": "2026-09-24",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月24日 · 无提交"
+    },
+    {
+      "date": "2026-09-25",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月25日 · 无提交"
+    },
+    {
+      "date": "2026-09-26",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月26日 · 无提交"
+    },
+    {
+      "date": "2026-09-27",
+      "count": 1,
+      "level": 1,
+      "tooltip": "9月27日 · 1 次提交"
+    },
+    {
+      "date": "2026-09-28",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月28日 · 无提交"
+    },
+    {
+      "date": "2026-09-29",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月29日 · 无提交"
+    },
+    {
+      "date": "2026-09-30",
+      "count": 0,
+      "level": 0,
+      "tooltip": "9月30日 · 无提交"
+    },
+    {
+      "date": "2026-10-01",
+      "count": 0,
+      "level": 0,
+      "tooltip": "10月1日 · 无提交"
+    },
+    {
+      "date": "2026-10-02",
+      "count": 0,
+      "level": 0,
+      "tooltip": "10月2日 · 无提交"
+    },
+    {
+      "date": "2026-10-03",
+      "count": 0,
+      "level": 0,
+      "tooltip": "10月3日 · 无提交"
+    },
+    {
+      "date": "2026-10-04",
+      "count": 0,
+      "level": 0,
+      "tooltip": "10月4日 · 无提交"
+    },
+    {
+      "date": "2026-10-05",
+      "count": 0,
+      "level": 0,
+      "tooltip": "10月5日 · 无提交"
+    },
+    {
+      "date": "2026-10-06",
+      "count": 0,
+      "level": 0,
+      "tooltip": "10月6日 · 无提交"
+    },
+    {
+      "date": "2026-10-07",
+      "count": 0,
+      "level": 0,
+      "tooltip": "10月7日 · 无提交"
+    }
+  ],
+  "totalContributions": 124,
+  "activeDays": 25
 }
